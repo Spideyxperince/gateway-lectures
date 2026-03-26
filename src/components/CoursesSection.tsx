@@ -35,7 +35,7 @@ const CoursesSection = () => {
 
       <div className="container relative mx-auto px-6">
         <h2 className="text-center text-3xl font-black text-foreground md:text-4xl">
-          BTech 1st Year <span className="text-gradient">Courses</span>
+          BTech 1st Year <span className="text-primary">Courses</span>
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-center text-muted-foreground">
           Pick a full group bundle at ₹500 or enroll in any single subject for just
@@ -71,7 +71,7 @@ const CoursesSection = () => {
                 <p className="mt-1 text-sm text-muted-foreground">{bundle.subjects}</p>
 
                 <div className="mt-4 flex items-baseline gap-2">
-                  <span className="text-4xl font-black text-gradient">₹500</span>
+                  <span className="text-4xl font-black text-primary">₹500</span>
                   <span className="text-lg text-muted-foreground line-through">₹1000</span>
                 </div>
 
@@ -110,7 +110,7 @@ const CoursesSection = () => {
                 </span>
                 <h4 className="mt-4 text-lg font-bold text-foreground">{subject}</h4>
                 <div className="mt-2 flex items-baseline gap-2">
-                  <span className="text-3xl font-black text-gradient">₹150</span>
+                  <span className="text-3xl font-black text-primary">₹150</span>
                   <span className="text-base text-muted-foreground line-through">₹300</span>
                 </div>
 

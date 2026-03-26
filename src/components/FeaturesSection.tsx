@@ -35,7 +35,7 @@ const FeaturesSection = () => {
 
       <div className="container relative mx-auto px-6">
         <h2 className="text-center text-3xl font-black text-foreground md:text-4xl">
-          Why Choose <span className="text-gradient">Gateway Classes?</span>
+          Why Choose <span className="text-primary">Gateway Classes?</span>
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-center text-muted-foreground">
           Everything a BTech 1st year student needs to clear exams with confidence,

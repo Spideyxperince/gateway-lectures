@@ -53,7 +53,7 @@ const EnrollmentSection = () => {
 
       <div className="container relative mx-auto px-6">
         <h2 className="text-center text-3xl font-black text-foreground md:text-4xl">
-          Complete Your <span className="text-gradient">Enrollment</span>
+          Complete Your <span className="text-primary">Enrollment</span>
         </h2>
         <p className="mx-auto mt-4 max-w-lg text-center text-muted-foreground">
           Follow these 3 simple steps to get instant access to your classes.
@@ -157,7 +157,7 @@ const EnrollmentSection = () => {
                 />
               </div>
 
-              <Button type="submit" size="lg" className="w-full rounded-2xl h-14 text-base font-semibold bg-gradient-to-r from-primary to-accent shadow-lg shadow-primary/20 hover:shadow-primary/30 transition-shadow text-primary-foreground">
+              <Button type="submit" size="lg" className="w-full rounded-2xl h-14 text-base font-semibold bg-primary shadow-lg shadow-primary/20 hover:bg-primary/90 transition-all text-primary-foreground">
                 Submit Details <Send className="ml-2 h-4 w-4" />
               </Button>
             </form>
