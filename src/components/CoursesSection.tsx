@@ -35,7 +35,7 @@ const CoursesSection = () => {
 
       <div className="container relative mx-auto px-6">
         <h2 className="text-center text-3xl font-black text-foreground md:text-4xl">
-          BTech 1st Year <span className="text-gradient">Courses</span>
+          BTech 1st Year <span className="text-primary">Courses</span>
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-center text-muted-foreground">
           Pick a full group bundle at ₹500 or enroll in any single subject for just
