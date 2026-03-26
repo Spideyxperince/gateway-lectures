@@ -28,10 +28,14 @@ const singleSubjects = [
 
 const CoursesSection = () => {
   return (
-    <section id="courses" className="bg-secondary py-20">
-      <div className="container mx-auto px-6">
+    <section id="courses" className="relative py-24 overflow-hidden">
+      {/* Background glows */}
+      <div className="absolute top-20 right-0 h-72 w-72 rounded-full bg-accent/8 blur-[100px]" />
+      <div className="absolute bottom-20 left-0 h-72 w-72 rounded-full bg-primary/8 blur-[100px]" />
+
+      <div className="container relative mx-auto px-6">
         <h2 className="text-center text-3xl font-black text-foreground md:text-4xl">
-          BTech 1st Year Courses
+          BTech 1st Year <span className="text-gradient">Courses</span>
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-center text-muted-foreground">
           Pick a full group bundle at ₹500 or enroll in any single subject for just
@@ -41,7 +45,7 @@ const CoursesSection = () => {
         {/* Group Bundles */}
         <div className="mt-12">
           <h3 className="flex items-center gap-2 text-lg font-bold text-foreground">
-            <span className="h-2.5 w-2.5 rounded-full bg-primary" />
+            <span className="h-2.5 w-2.5 rounded-full bg-primary animate-pulse" />
             Group Bundles — ₹500 each
           </h3>
 
@@ -49,36 +53,38 @@ const CoursesSection = () => {
             {groupBundles.map((bundle) => (
               <div
                 key={bundle.name}
-                className={`relative rounded-2xl border-2 bg-card p-6 ${
-                  bundle.bestValue ? "border-primary" : "border-border"
+                className={`relative rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 ${
+                  bundle.bestValue
+                    ? "glass-glow border-2 border-primary/40"
+                    : "glass"
                 }`}
               >
                 {bundle.bestValue && (
-                  <span className="absolute -top-3 left-6 rounded-full bg-primary px-4 py-1 text-xs font-bold text-primary-foreground">
+                  <span className="absolute -top-3 left-6 rounded-full bg-primary px-4 py-1 text-xs font-bold text-primary-foreground shadow-lg shadow-primary/30">
                     Best Value
                   </span>
                 )}
-                <span className="inline-block rounded-full bg-primary/10 px-4 py-1 text-xs font-bold uppercase tracking-wider text-primary">
+                <span className="inline-block rounded-full bg-primary/15 px-4 py-1 text-xs font-bold uppercase tracking-wider text-primary">
                   Group Bundle — 5 Subjects
                 </span>
                 <h4 className="mt-4 text-xl font-bold text-foreground">{bundle.name}</h4>
                 <p className="mt-1 text-sm text-muted-foreground">{bundle.subjects}</p>
 
                 <div className="mt-4 flex items-baseline gap-2">
-                  <span className="text-4xl font-black text-primary">₹500</span>
+                  <span className="text-4xl font-black text-gradient">₹500</span>
                   <span className="text-lg text-muted-foreground line-through">₹1000</span>
                 </div>
 
                 <ul className="mt-5 space-y-3">
                   {["All 5 subjects in the group", "Full syllabus video lectures", "Private Telegram Group Access"].map((item) => (
-                    <li key={item} className="flex items-center gap-2 text-sm text-foreground">
+                    <li key={item} className="flex items-center gap-2 text-sm text-foreground/90">
                       <CheckCircle2 className="h-5 w-5 text-success" />
                       {item}
                     </li>
                   ))}
                 </ul>
 
-                <Button asChild className="mt-6 w-full rounded-xl h-12 text-base font-semibold">
+                <Button asChild className="mt-6 w-full rounded-2xl h-12 text-base font-semibold bg-primary hover:bg-primary/90 shadow-lg shadow-primary/20">
                   <a href="#enroll">Enroll in Group</a>
                 </Button>
               </div>
@@ -89,7 +95,7 @@ const CoursesSection = () => {
         {/* Single Subjects */}
         <div className="mt-14">
           <h3 className="flex items-center gap-2 text-lg font-bold text-foreground">
-            <span className="h-2.5 w-2.5 rounded-full bg-primary" />
+            <span className="h-2.5 w-2.5 rounded-full bg-accent animate-pulse" />
             Single Subjects — ₹150 each
           </h3>
 
@@ -97,27 +103,27 @@ const CoursesSection = () => {
             {singleSubjects.map((subject) => (
               <div
                 key={subject}
-                className="rounded-2xl border border-border bg-card p-6"
+                className="glass rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:glass-glow"
               >
-                <span className="inline-block rounded-full bg-primary/10 px-4 py-1 text-xs font-bold uppercase tracking-wider text-primary">
+                <span className="inline-block rounded-full bg-accent/15 px-4 py-1 text-xs font-bold uppercase tracking-wider text-accent">
                   Single Subject
                 </span>
                 <h4 className="mt-4 text-lg font-bold text-foreground">{subject}</h4>
                 <div className="mt-2 flex items-baseline gap-2">
-                  <span className="text-3xl font-black text-primary">₹150</span>
+                  <span className="text-3xl font-black text-gradient">₹150</span>
                   <span className="text-base text-muted-foreground line-through">₹300</span>
                 </div>
 
                 <ul className="mt-4 space-y-2">
                   {["Full syllabus video lectures", "Telegram group access"].map((item) => (
-                    <li key={item} className="flex items-center gap-2 text-sm text-foreground">
+                    <li key={item} className="flex items-center gap-2 text-sm text-foreground/90">
                       <CheckCircle2 className="h-4 w-4 text-success" />
                       {item}
                     </li>
                   ))}
                 </ul>
 
-                <Button asChild variant="secondary" className="mt-5 w-full rounded-xl h-11 font-semibold">
+                <Button asChild variant="secondary" className="mt-5 w-full rounded-2xl h-11 font-semibold bg-secondary/80 hover:bg-secondary border-glass-border/20 border text-foreground">
                   <a href="#enroll">Select Subject</a>
                 </Button>
               </div>
