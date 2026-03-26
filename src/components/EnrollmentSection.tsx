@@ -53,7 +53,7 @@ const EnrollmentSection = () => {
 
       <div className="container relative mx-auto px-6">
         <h2 className="text-center text-3xl font-black text-foreground md:text-4xl">
-          Complete Your <span className="text-gradient">Enrollment</span>
+          Complete Your <span className="text-primary">Enrollment</span>
         </h2>
         <p className="mx-auto mt-4 max-w-lg text-center text-muted-foreground">
           Follow these 3 simple steps to get instant access to your classes.

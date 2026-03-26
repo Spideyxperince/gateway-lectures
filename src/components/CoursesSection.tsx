@@ -110,7 +110,7 @@ const CoursesSection = () => {
                 </span>
                 <h4 className="mt-4 text-lg font-bold text-foreground">{subject}</h4>
                 <div className="mt-2 flex items-baseline gap-2">
-                  <span className="text-3xl font-black text-gradient">₹150</span>
+                  <span className="text-3xl font-black text-primary">₹150</span>
                   <span className="text-base text-muted-foreground line-through">₹300</span>
                 </div>
 

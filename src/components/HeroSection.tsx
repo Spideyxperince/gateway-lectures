@@ -27,7 +27,7 @@ const HeroSection = () => {
 
         <h1 className="mx-auto max-w-4xl text-4xl font-black leading-tight tracking-tight text-foreground md:text-6xl lg:text-7xl">
           Ace Your BTech 1st Year at{" "}
-          <span className="text-gradient">Affordable Prices</span>
+          <span className="text-primary">Affordable Prices</span>
         </h1>
 
         <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
