@@ -157,7 +157,7 @@ const EnrollmentSection = () => {
                 />
               </div>
 
-              <Button type="submit" size="lg" className="w-full rounded-2xl h-14 text-base font-semibold bg-gradient-to-r from-primary to-accent shadow-lg shadow-primary/20 hover:shadow-primary/30 transition-shadow text-primary-foreground">
+              <Button type="submit" size="lg" className="w-full rounded-2xl h-14 text-base font-semibold bg-primary shadow-lg shadow-primary/20 hover:bg-primary/90 transition-all text-primary-foreground">
                 Submit Details <Send className="ml-2 h-4 w-4" />
               </Button>
             </form>
