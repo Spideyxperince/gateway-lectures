@@ -71,7 +71,7 @@ const CoursesSection = () => {
                 <p className="mt-1 text-sm text-muted-foreground">{bundle.subjects}</p>
 
                 <div className="mt-4 flex items-baseline gap-2">
-                  <span className="text-4xl font-black text-gradient">₹500</span>
+                  <span className="text-4xl font-black text-primary">₹500</span>
                   <span className="text-lg text-muted-foreground line-through">₹1000</span>
                 </div>
 
