@@ -4,7 +4,7 @@ const features = [
   {
     icon: Star,
     title: "High Quality Lectures",
-    description: "Crystal clear explanations by experienced educators.",
+    description: "Crystal clear explanations by experienced educators. Free samples available on demand.",
     delay: "0s",
   },
   {
